@@ -51,11 +51,12 @@ int main ( int argc, char *argv[] ) {
   }
 
   else {
-    cout << "Unable to open file"; 
+    cout << "Unable to open file."; 
+    exit (EXIT_FAILURE);
   }
 
-  for (auto i = numsToKeep.begin(); i != numsToKeep.end(); ++i) {
-    cout << *i << endl;
+  for (auto i : numsToKeep) {
+    cout << i << endl;
   }
 
   return 0;
