@@ -66,7 +66,9 @@ public class TestPalindrome {
    public void testManyCharacters() 
    {
       assertTrue(Palindrome.isPalindrome_recursive("RaCecAr"));
-      assertTrue(Palindrome.isPalindrome_iterative("RaCecAr"));
+      assertTrue(Palindrome.isPalindrome_recursive("RaCecAr"));
+      assertTrue(Palindrome.isPalindrome_recursive("123456789AbCdcBa987654321"));
+      assertTrue(Palindrome.isPalindrome_iterative("123456789AbCdcBa987654321"));
       assertTrue(Palindrome.isPalindrome_recursive("aaaaaaaaaaBaaaaaaaaaa"));
       assertTrue(Palindrome.isPalindrome_iterative("aaaaaaaaaaBaaaaaaaaaa"));
    }
