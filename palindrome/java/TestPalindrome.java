@@ -26,6 +26,8 @@ public class TestPalindrome {
       assertTrue(Palindrome.isPalindrome_iterative("a"));
       assertTrue(Palindrome.isPalindrome_recursive("1"));
       assertTrue(Palindrome.isPalindrome_iterative("1"));
+      assertTrue(Palindrome.isPalindrome_recursive(" "));
+      assertTrue(Palindrome.isPalindrome_iterative(" "));
    }
 
    @Test
@@ -43,6 +45,10 @@ public class TestPalindrome {
       assertFalse(Palindrome.isPalindrome_iterative("1a"));
       assertFalse(Palindrome.isPalindrome_recursive("12"));
       assertFalse(Palindrome.isPalindrome_iterative("12"));
+      assertTrue(Palindrome.isPalindrome_recursive("  "));
+      assertTrue(Palindrome.isPalindrome_iterative("  "));
+      assertFalse(Palindrome.isPalindrome_recursive(" a"));
+      assertFalse(Palindrome.isPalindrome_iterative(" a"));
    }
 
    @Test
@@ -60,16 +66,24 @@ public class TestPalindrome {
       assertFalse(Palindrome.isPalindrome_iterative("1ba"));
       assertFalse(Palindrome.isPalindrome_recursive("122"));
       assertFalse(Palindrome.isPalindrome_iterative("122"));
+      assertTrue(Palindrome.isPalindrome_recursive("   "));
+      assertTrue(Palindrome.isPalindrome_iterative("   "));
+      assertFalse(Palindrome.isPalindrome_recursive(" ba"));
+      assertFalse(Palindrome.isPalindrome_iterative(" ba"));
    }
 
    @Test
    public void testManyCharacters() 
    {
       assertTrue(Palindrome.isPalindrome_recursive("RaCecAr"));
-      assertTrue(Palindrome.isPalindrome_recursive("RaCecAr"));
+      assertTrue(Palindrome.isPalindrome_iterative("RaCecAr"));
       assertTrue(Palindrome.isPalindrome_recursive("123456789AbCdcBa987654321"));
       assertTrue(Palindrome.isPalindrome_iterative("123456789AbCdcBa987654321"));
       assertTrue(Palindrome.isPalindrome_recursive("aaaaaaaaaaBaaaaaaaaaa"));
       assertTrue(Palindrome.isPalindrome_iterative("aaaaaaaaaaBaaaaaaaaaa"));
+      assertFalse(Palindrome.isPalindrome_recursive("aaaaaaaaaa1Baaaaaaaaaa"));
+      assertFalse(Palindrome.isPalindrome_iterative("aaaaaaaaaa1Baaaaaaaaaa"));
+      assertFalse(Palindrome.isPalindrome_recursive("aaaaaaaaaa Baaaaaaaaaa"));
+      assertFalse(Palindrome.isPalindrome_iterative("aaaaaaaaaa Baaaaaaaaaa"));
    }
 }
